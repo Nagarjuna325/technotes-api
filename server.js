@@ -19,7 +19,7 @@ const mongoose = require('mongoose')
 const {logEvents} = require('./middleware/logger')
 
 const corsOptions = require('./config/corsOptions')
-const PORT =  process.env.PORT || 3500
+const PORT =  process.env.PORT ||3500
 
 console.log(process.env.NODE_ENV)
 

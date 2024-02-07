@@ -31,7 +31,7 @@ app.use(cors(corsOptions))
 
 app.use(cors())
    
-app.use(express.json())
+app.use(express.json()) // built in middleware
 
 app.use(cookieParser()) // 3rd party middle ware
 

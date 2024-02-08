@@ -28,8 +28,11 @@ connectDB()
 app.use(logger)
 
 app.use(cors(corsOptions))
+// app.use(cors({
+//     origin: "*",
+// }))
 
-app.use(cors())
+//app.use(cors())
    
 app.use(express.json()) // built in middleware
 
@@ -39,7 +42,7 @@ app.use('/', express.static(path.join(__dirname,'public'))) // one builtin middl
 
 app.use('/', require('./routes/root'))
 
-app.use('/users',require('./routes/authRoutes'))
+app.use('/auth',require('./routes/authRoutes'))
 app.use('/users',require('./routes/userRoutes'))
 app.use('/notes', require('./routes/noteRoutes'))
 

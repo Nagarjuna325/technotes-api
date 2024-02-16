@@ -28,10 +28,15 @@ connectDB()
 app.use(logger)
 
 // app.use(cors(corsOptions))
-app.use(cors({
-    origin: "*",
-}))
+// app.use(cors({
+//     origin: "*",
+// }))
 
+// Enable CORS for all origins with credentials
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials: true
+  }));
 //app.use(cors())
    
 app.use(express.json()) // built in middleware
